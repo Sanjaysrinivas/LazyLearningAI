@@ -1,5 +1,3 @@
 textblob
 transformers
-tweepy
-pandas
-torch
+
