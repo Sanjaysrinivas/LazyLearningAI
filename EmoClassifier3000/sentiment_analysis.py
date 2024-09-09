@@ -32,7 +32,7 @@ def textblob_sentiment(text):
 def bert_sentiment(text):
     # BERT takes sentiment analysis very seriously, unlike TextBlob. It uses cutting-edge transformer models to "understand" emotions.
 
-    sentiment_model = pipeline("sentiment-analysis")  # We load the pre-trained sentiment analysis model from HuggingFace.
+    sentiment_model = pipeline("sentiment-analysis", model= 'distilbert-base-uncased-finetuned-sst-2-english')  # We load the pre-trained sentiment analysis model from HuggingFace.
     result = sentiment_model(text)  # BERT analyzes the text and returns a result.
     
     # BERT doesn't just guess. It comes with a label (Positive/Negative) and a confidence score.
@@ -40,10 +40,10 @@ def bert_sentiment(text):
 
 
 # Step 4: Test our sentiment analysis functions
-# Why? Because all this code is useless unless we try it out on some sample text to see if our models understand emotions better than your average human.
+# Why? Because all this code is useless unless we try , it out on some sample text to see if our models understand emotions better than your average human.
 if __name__ == "__main__":
     # Let's test our models with a sample text
-    test_text = "I absolutely love this project! It's amazing!"  # Clearly a happy sentence, or so we think.
+    test_text = "The weather is nice"  # Clearly a happy sentence, or so we think.
     
     # TextBlob Analysis
     print("TextBlob Sentiment:")
