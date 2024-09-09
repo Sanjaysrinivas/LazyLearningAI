@@ -43,7 +43,7 @@ def bert_sentiment(text):
 # Why? Because all this code is useless unless we try , it out on some sample text to see if our models understand emotions better than your average human.
 if __name__ == "__main__":
     # Let's test our models with a sample text
-    test_text = "The weather is nice"  # Clearly a happy sentence, or so we think.
+    test_text = "I absolutely love this project! It's amazing"  # Clearly a happy sentence, or so we think.
     
     # TextBlob Analysis
     print("TextBlob Sentiment:")
